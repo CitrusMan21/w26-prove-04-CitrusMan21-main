@@ -1,4 +1,6 @@
-﻿namespace prove_04
+﻿using System;
+using System.Collections.Generic;
+namespace prove_04
 {
     public class PriorityQueue
     {
@@ -13,7 +15,7 @@
         {
             // REQUIRED: exception instead of null
             if (_queue.Count == 0)
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Queue is empty.");
 
             int highPriorityIndex = 0;
 
@@ -34,7 +36,9 @@
         {
             return $"[{string.Join(", ", _queue)}]";
         }
-    }
+
+        }
+   
 
     internal class PriorityItem
     {

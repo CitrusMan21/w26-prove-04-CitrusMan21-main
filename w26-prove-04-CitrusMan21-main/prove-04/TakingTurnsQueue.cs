@@ -15,7 +15,7 @@ public class TakingTurnsQueue
     {
         if (_people.IsEmpty())
         {
-            throw new InvalidOperationException("No one in the queue.");
+            return "ERROR: No one in the queue.";
         }
 
         Person person = _people.Dequeue();
